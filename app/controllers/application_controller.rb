@@ -36,7 +36,6 @@ class ApplicationController < Sinatra::Base
   end
   
   patch '/articles/:id' do
-    # binding.pry
     @article = Article.find(params[:id])
     @article.update(params[:article])
     @article.save
@@ -45,9 +44,4 @@ class ApplicationController < Sinatra::Base
   
 end
 
-
-
-# id: 2,
-# title: "second article",
-# content: "I'm a really good writer">
 
