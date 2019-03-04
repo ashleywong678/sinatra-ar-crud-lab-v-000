@@ -42,7 +42,7 @@ class ApplicationController < Sinatra::Base
   end
   
   delete '/articles/:id' do
-    @article = Article.find(params[:id])
+    Article.find(params[:id])
     
     erb :index
   end
